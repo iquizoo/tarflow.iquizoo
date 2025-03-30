@@ -19,11 +19,13 @@
 #'   Usually you don't need to change this.
 #' @return A S3 object of class `tarflow.template` with the options.
 #' @export
-setup_templates <- function(contents = NULL,
-                            users = NULL,
-                            raw_data = NULL,
-                            scores = NULL,
-                            progress_hash = NULL) {
+setup_templates <- function(
+  contents = NULL,
+  users = NULL,
+  raw_data = NULL,
+  scores = NULL,
+  progress_hash = NULL
+) {
   structure(
     list(
       contents = contents %||% package_file("sql", "contents.sql"),

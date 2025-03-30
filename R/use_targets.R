@@ -17,7 +17,8 @@ use_targets_pipeline <- function() {
   }
   copy_success <- file.copy(
     system.file(
-      "pipelines", "use_targets.R",
+      "pipelines",
+      "use_targets.R",
       package = "tarflow.iquizoo"
     ),
     script

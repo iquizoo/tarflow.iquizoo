@@ -48,7 +48,8 @@ clean_users_props <- function(users, props) {
 
 package_file <- function(type, file) {
   system.file(
-    type, file,
+    type,
+    file,
     package = "tarflow.iquizoo"
   )
 }

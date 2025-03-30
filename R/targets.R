@@ -41,17 +41,22 @@
 #' @param cache The cache to be used in [fetch_iquizoo_mem()].
 #' @return A list of target objects.
 #' @export
-tar_prep_iquizoo <- function(params, contents, ...,
-                             what = c("raw_data", "scores"),
-                             action_raw_data = c("all", "parse", "none"),
-                             combine = NULL,
-                             subset_users_props = get_users_props_names(),
-                             templates = setup_templates(),
-                             check_progress = TRUE,
-                             cache = NULL) {
+tar_prep_iquizoo <- function(
+  params,
+  contents,
+  ...,
+  what = c("raw_data", "scores"),
+  action_raw_data = c("all", "parse", "none"),
+  combine = NULL,
+  subset_users_props = get_users_props_names(),
+  templates = setup_templates(),
+  check_progress = TRUE,
+  cache = NULL
+) {
   check_dots_empty()
   check_templates(templates)
-  contents <- switch(check_exclusive(params, contents),
+  contents <- switch(
+    check_exclusive(params, contents),
     params = fetch_iquizoo_mem(cache)(
       read_file(templates$contents),
       params = unname(
@@ -60,8 +65,7 @@ tar_prep_iquizoo <- function(params, contents, ...,
     ),
     contents = {
       stopifnot(
-        "`content` must be a `data.frame`." =
-          is.data.frame(contents)
+        "`content` must be a `data.frame`." = is.data.frame(contents)
       )
       contents
     }
@@ -158,10 +162,12 @@ tar_prep_hash <- function(contents, templates = setup_templates()) {
 #'   if the project is finalized.
 #' @return A list of target objects.
 #' @export
-tar_fetch_users <- function(contents,
-                            subset_users_props = get_users_props_names(),
-                            templates = setup_templates(),
-                            check_progress = TRUE) {
+tar_fetch_users <- function(
+  contents,
+  subset_users_props = get_users_props_names(),
+  templates = setup_templates(),
+  check_progress = TRUE
+) {
   check_templates(templates)
   project_ids <- as.character(unique(contents$project_id))
   targets::tar_target_raw(
@@ -204,10 +210,12 @@ tar_fetch_users <- function(contents,
 #'   argument as `FALSE`.
 #' @return A list of target objects.
 #' @export
-tar_fetch_data <- function(contents,
-                           what = c("raw_data", "scores"),
-                           templates = setup_templates(),
-                           check_progress = TRUE) {
+tar_fetch_data <- function(
+  contents,
+  what = c("raw_data", "scores"),
+  templates = setup_templates(),
+  check_progress = TRUE
+) {
   what <- match.arg(what)
   check_templates(templates)
   by(
@@ -260,11 +268,13 @@ tar_fetch_data <- function(contents,
 #' @param name_indices The name of the indices target.
 #' @return A list of target objects.
 #' @export
-tar_prep_raw <- function(contents,
-                         action_raw_data = c("parse", "preproc"),
-                         name_data = "raw_data",
-                         name_parsed = "raw_data_parsed",
-                         name_indices = "indices") {
+tar_prep_raw <- function(
+  contents,
+  action_raw_data = c("parse", "preproc"),
+  name_data = "raw_data",
+  name_parsed = "raw_data_parsed",
+  name_indices = "indices"
+) {
   action_raw_data <- match.arg(action_raw_data, several.ok = TRUE)
   contents <- unique(contents["game_id"])
   contents$tar_data <- syms(sprintf("%s_%s", name_data, contents$game_id))
@@ -304,7 +314,12 @@ objects <- function() {
 
 utils::globalVariables(
   c(
-    "tar_data", "tar_parsed", "tar_indices",
-    "preproc_data", "prep_fun", "input", "extra"
+    "tar_data",
+    "tar_parsed",
+    "tar_indices",
+    "preproc_data",
+    "prep_fun",
+    "input",
+    "extra"
   )
 )
