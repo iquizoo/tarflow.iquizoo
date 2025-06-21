@@ -11,7 +11,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 badge](https://psychelzh.r-universe.dev/badges/tarflow.iquizoo)](https://psychelzh.r-universe.dev/tarflow.iquizoo)
 [![R-CMD-check](https://github.com/psychelzh/tarflow.iquizoo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/psychelzh/tarflow.iquizoo/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/psychelzh/tarflow.iquizoo/graph/badge.svg)](https://app.codecov.io/gh/psychelzh/tarflow.iquizoo)
+coverage](https://codecov.io/gh/iquizoo/tarflow.iquizoo/graph/badge.svg)](https://app.codecov.io/gh/iquizoo/tarflow.iquizoo)
 <!-- badges: end -->
 
 The goal of tarflow.iquizoo is to provide workflow auto-generation for
