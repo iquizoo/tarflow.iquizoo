@@ -11,9 +11,9 @@ For "iquizoo" data processing, there is already a package called "preproc.iquizo
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://psychelzh.github.io/tarflow.iquizoo/}
-  \item \url{https://github.com/psychelzh/tarflow.iquizoo}
-  \item Report bugs at \url{https://github.com/psychelzh/tarflow.iquizoo/issues}
+  \item \url{https://iquizoo.github.io/tarflow.iquizoo/}
+  \item \url{https://github.com/iquizoo/tarflow.iquizoo}
+  \item Report bugs at \url{https://github.com/iquizoo/tarflow.iquizoo/issues}
 }
 
 }
