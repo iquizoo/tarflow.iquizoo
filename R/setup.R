@@ -19,11 +19,13 @@
 #'   Usually you don't need to change this.
 #' @return A S3 object of class `tarflow.template` with the options.
 #' @export
-setup_templates <- function(contents = NULL,
-                            users = NULL,
-                            raw_data = NULL,
-                            scores = NULL,
-                            progress_hash = NULL) {
+setup_templates <- function(
+  contents = NULL,
+  users = NULL,
+  raw_data = NULL,
+  scores = NULL,
+  progress_hash = NULL
+) {
   structure(
     list(
       contents = contents %||% package_file("sql", "contents.sql"),
@@ -82,9 +84,9 @@ setup_option_file <- function(path = NULL, overwrite = FALSE, quietly = FALSE) {
 # helper functions
 default_file <- function() {
   if (Sys.info()["sysname"] == "Windows") {
-    return("C:/my.cnf")
+    "C:/my.cnf"
   } else {
-    return("~/.my.cnf")
+    "~/.my.cnf"
   }
 }
 

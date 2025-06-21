@@ -1,6 +1,6 @@
 Package: tarflow.iquizoo
 Title: Setup "targets" Workflows for "iquizoo" Data Processing
-Version: 3.12.6
+Version: 3.12.7
 Authors@R: c(
     person("Liang", "Zhang", , "psychelzh@outlook.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9041-1150")),
@@ -12,9 +12,9 @@ Description: For "iquizoo" data processing, there is already a package
     provided by "targets" package which mimics the logic of "make",
     automating the building processes.
 License: Apache License (>= 2)
-URL: https://psychelzh.github.io/tarflow.iquizoo/,
-    https://github.com/psychelzh/tarflow.iquizoo
-BugReports: https://github.com/psychelzh/tarflow.iquizoo/issues
+URL: https://iquizoo.github.io/tarflow.iquizoo/,
+    https://github.com/iquizoo/tarflow.iquizoo
+BugReports: https://github.com/iquizoo/tarflow.iquizoo/issues
 Depends:
     R (>= 4.1.0)
 Imports:
@@ -42,8 +42,8 @@ Suggests:
     testthat (>= 3.0.0),
     tibble
 Remotes:
-    psychelzh/data.iquizoo,
-    psychelzh/preproc.iquizoo
+    iquizoo/data.iquizoo,
+    iquizoo/preproc.iquizoo
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Config/testthat/start-first: targets

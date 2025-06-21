@@ -9,7 +9,10 @@
 
   # try setting up option file if source not working
   if (!check_source()) {
-    tryCatch(setup_option_file(quietly = TRUE), error = \(e) {})
+    tryCatch(
+      setup_option_file(quietly = TRUE),
+      error = function(e) NULL
+    )
   }
 
   invisible()

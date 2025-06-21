@@ -26,6 +26,7 @@ tar_option_set(
 tar_source()
 # source("other_functions.R") # Source other scripts as needed.
 
+# fmt: skip
 params <- tibble::tribble(
   ~organization_name, ~project_name, ~course_name, ~game_name,
   # TODO: replace these with your own

@@ -9,9 +9,12 @@
 #' @return A [data.frame] contains the fetched data.
 #' @seealso [fetch_iquizoo_mem()] for a memoised version of this function.
 #' @export
-fetch_iquizoo <- function(query, ...,
-                          params = NULL,
-                          group = getOption("tarflow.group")) {
+fetch_iquizoo <- function(
+  query,
+  ...,
+  params = NULL,
+  group = getOption("tarflow.group")
+) {
   check_dots_used()
   con <- DBI::dbConnect(RMariaDB::MariaDB(), group = group, ...)
   on.exit(DBI::dbDisconnect(con))
@@ -39,7 +42,8 @@ fetch_iquizoo <- function(query, ...,
 fetch_iquizoo_mem <- function(cache = NULL) {
   requireNamespace("digest", quietly = TRUE)
   if (is.null(cache)) {
-    cache <- switch(Sys.getenv("TARFLOW_CACHE", "disk"),
+    cache <- switch(
+      Sys.getenv("TARFLOW_CACHE", "disk"),
       disk = cachem::cache_disk(
         "~/.cache/tarflow.iquizoo",
         max_age = 3600 * 24 * 7 # 7 days
@@ -82,10 +86,14 @@ fetch_iquizoo_mem <- function(cache = NULL) {
 #'   information.
 #' @return A [data.frame] contains the fetched data.
 #' @export
-fetch_data <- function(project_id, game_id, ...,
-                       what = c("raw_data", "scores"),
-                       query = NULL,
-                       suffix_format = "%Y0101") {
+fetch_data <- function(
+  project_id,
+  game_id,
+  ...,
+  what = c("raw_data", "scores"),
+  query = NULL,
+  suffix_format = "%Y0101"
+) {
   check_dots_used()
   what <- match.arg(what)
   # data separated by project date, so we need to get the project date first
@@ -95,7 +103,8 @@ fetch_data <- function(project_id, game_id, ...,
     .subset2("project_date") |>
     format(suffix_format)
   table_name <- paste0(
-    switch(what,
+    switch(
+      what,
       raw_data = "content_orginal_data_",
       scores = "content_ability_score_"
     ),
@@ -123,9 +132,11 @@ fetch_data <- function(project_id, game_id, ...,
 #' @param name_raw_parsed The name used to store parsed data.
 #' @return A [data.frame] contains the parsed data.
 #' @export
-parse_data <- function(data,
-                       col_raw_json = "game_data",
-                       name_raw_parsed = "raw_parsed") {
+parse_data <- function(
+  data,
+  col_raw_json = "game_data",
+  name_raw_parsed = "raw_parsed"
+) {
   data[[name_raw_parsed]] <- lapply(
     data[[col_raw_json]],
     parse_raw_json
@@ -145,7 +156,7 @@ parse_raw_json <- function(jstr) {
           i = "Will parse it as `NULL` instead."
         )
       )
-      return()
+      invisible()
     }
   )
 }

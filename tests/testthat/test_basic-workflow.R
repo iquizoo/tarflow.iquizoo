@@ -19,11 +19,10 @@ targets::tar_test("Workflow works", {
 })
 
 targets::tar_test("Users properties fetching correctly", {
-  skip_if_not_installed("preproc.iquizoo")
   targets::tar_script({
     params <- tibble::tribble(
       ~organization_name, ~project_name, ~course_name, ~game_name,
-      NA, "北师大附属实验中学大脑课堂体验课前测（2023级初一）", NA, NA
+      "北京师范大学（测试）", "认知测评A", NA, NA
     )
     contents <- fetch_iquizoo(
       read_file(setup_templates()$contents),
