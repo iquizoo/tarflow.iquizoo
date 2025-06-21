@@ -12,5 +12,3 @@
 ^data-raw$
 ^\.lintr$
 ^CODE_OF_CONDUCT\.md$
-^[\.]?air\.toml$
-^\.vscode$
