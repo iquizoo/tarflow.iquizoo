@@ -156,7 +156,7 @@ parse_raw_json <- function(jstr) {
           i = "Will parse it as `NULL` instead."
         )
       )
-      return()
+      invisible()
     }
   )
 }

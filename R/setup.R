@@ -84,9 +84,9 @@ setup_option_file <- function(path = NULL, overwrite = FALSE, quietly = FALSE) {
 # helper functions
 default_file <- function() {
   if (Sys.info()["sysname"] == "Windows") {
-    return("C:/my.cnf")
+    "C:/my.cnf"
   } else {
-    return("~/.my.cnf")
+    "~/.my.cnf"
   }
 }
 

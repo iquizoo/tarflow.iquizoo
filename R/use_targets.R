@@ -30,7 +30,7 @@ use_targets_pipeline <- function() {
   cli::cli_alert_success(
     sprintf("File {.file %s} created successfully.", script)
   )
-  return(invisible())
+  invisible()
 }
 
 # nocov end
