@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tarflow.iquizoo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.12.7</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.12.8</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +38,10 @@
       <small>Source: <a href="https://github.com/iquizoo/tarflow.iquizoo/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="3.12.8" id="tarflowiquizoo-3128">tarflow.iquizoo 3.12.8<a class="anchor" aria-label="anchor" href="#tarflowiquizoo-3128"></a></h2>
+<ul><li>Fix urls, no user-level updates.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="3.12.7" id="tarflowiquizoo-3127">tarflow.iquizoo 3.12.7<a class="anchor" aria-label="anchor" href="#tarflowiquizoo-3127"></a></h2>
 <ul><li>Internal upkeeps (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/100" class="external-link">#100</a>)</li>
@@ -93,7 +97,7 @@
 <h3 id="new-features-3-12-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-3-12-0"></a></h3>
 <ul><li>Added <code>cache</code> argument to <code><a href="../reference/tar_prep_iquizoo.html">tar_prep_iquizoo()</a></code> to optionally specify how to cache the fetched configuration data.</li>
 <li>Support to customize the columns to be kept in the output of <code>users</code>. See [get_users_props_names()] for all available columns, and customize it by setting <code>subset_users_props</code> argument in <code><a href="../reference/tar_prep_iquizoo.html">tar_prep_iquizoo()</a></code>.</li>
-<li>Update contents sql template to support setting course name and game name (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/90" class="external-link">#90</a>).</li>
+<li>Update contents sql template to support setting course name and game name (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/90" class="external-link">#90</a>).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bug-fixes-3-12-0">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-3-12-0"></a></h3>
@@ -135,7 +139,7 @@
 <h2 class="pkg-version" data-toc-text="3.11.0" id="tarflowiquizoo-3110">tarflow.iquizoo 3.11.0<a class="anchor" aria-label="anchor" href="#tarflowiquizoo-3110"></a></h2>
 <div class="section level3">
 <h3 id="breaking-changes-3-11-0">Breaking Changes<a class="anchor" aria-label="anchor" href="#breaking-changes-3-11-0"></a></h3>
-<ul><li>Added <code><a href="../reference/parse_data.html">parse_data()</a></code>, previously named as <code>wrangle_data()</code>. See <a href="https://github.com/psychelzh/preproc.iquizoo/issues/86" class="external-link uri">https://github.com/psychelzh/preproc.iquizoo/issues/86</a>.</li>
+<ul><li>Added <code><a href="../reference/parse_data.html">parse_data()</a></code>, previously named as <code>wrangle_data()</code>. See <a href="https://github.com/iquizoo/preproc.iquizoo/issues/86" class="external-link uri">https://github.com/iquizoo/preproc.iquizoo/issues/86</a>.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -283,7 +287,7 @@
 <h2 class="pkg-version" data-toc-text="3.5.0" id="tarflowiquizoo-350">tarflow.iquizoo 3.5.0<a class="anchor" aria-label="anchor" href="#tarflowiquizoo-350"></a></h2>
 <div class="section level3">
 <h3 id="breaking-changes-3-5-0">Breaking Changes<a class="anchor" aria-label="anchor" href="#breaking-changes-3-5-0"></a></h3>
-<ul><li>Let pipeline perform raw data parsing and indices calculation on combined raw data from single tasks (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/73" class="external-link">#73</a>).</li>
+<ul><li>Let pipeline perform raw data parsing and indices calculation on combined raw data from single tasks (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/73" class="external-link">#73</a>).</li>
 <li>Let <code>prepare_fetch_data()</code> signal error when <code>contents</code> contains no data.</li>
 <li>Rename the target <code>contents</code> as <code>contents_origin</code> to avoid possible name conflict with <code>contents</code> input argument. This is a limitation of {targets} package.</li>
 </ul></div>
@@ -312,7 +316,7 @@
 <h2 class="pkg-version" data-toc-text="3.3.2" id="tarflowiquizoo-332">tarflow.iquizoo 3.3.2<a class="anchor" aria-label="anchor" href="#tarflowiquizoo-332"></a></h2>
 <div class="section level3">
 <h3 id="new-features-3-3-2">New Features<a class="anchor" aria-label="anchor" href="#new-features-3-3-2"></a></h3>
-<ul><li>Added two functions <code><a href="../reference/setup_option_file.html">setup_option_file()</a></code> and <code><a href="../reference/check_source.html">check_source()</a></code> to help setup the database connection option file and check if the database is ready (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/71" class="external-link">#71</a>).
+<ul><li>Added two functions <code><a href="../reference/setup_option_file.html">setup_option_file()</a></code> and <code><a href="../reference/check_source.html">check_source()</a></code> to help setup the database connection option file and check if the database is ready (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/71" class="external-link">#71</a>).
 <ul><li>To ensure option file is correctly set up, you should specify these three environment variables: <code>MYSQL_HOST</code>, <code>MYSQL_USER</code>, <code>MYSQL_PASSWORD</code>. See <a href="inst/database/my.cnf.tmpl">option file template</a> for details.</li>
 <li>Note if <code><a href="../reference/check_source.html">check_source()</a></code> returns <code>FALSE</code>, this package will call <code><a href="../reference/setup_option_file.html">setup_option_file()</a></code> once to setup the option file in loading phase. You should check if the option file is correctly set up.</li>
 </ul></li>
@@ -326,7 +330,7 @@
 <h2 class="pkg-version" data-toc-text="3.3.0" id="tarflowiquizoo-330">tarflow.iquizoo 3.3.0<a class="anchor" aria-label="anchor" href="#tarflowiquizoo-330"></a></h2>
 <div class="section level3">
 <h3 id="breaking-changes-3-3-0">Breaking Changes<a class="anchor" aria-label="anchor" href="#breaking-changes-3-3-0"></a></h3>
-<ul><li>The <code><a href="https://rmariadb.r-dbi.org/reference/dbConnect-MariaDBDriver-method.html" class="external-link">RMariaDB::MariaDB()</a></code> database driver is detected with higher priority, and <code>odbc::odbc()</code> is technically deprecated, although still supported (not sure for working) for now (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/68" class="external-link">#68</a>).</li>
+<ul><li>The <code><a href="https://rmariadb.r-dbi.org/reference/dbConnect-MariaDBDriver-method.html" class="external-link">RMariaDB::MariaDB()</a></code> database driver is detected with higher priority, and <code>odbc::odbc()</code> is technically deprecated, although still supported (not sure for working) for now (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/68" class="external-link">#68</a>).</li>
 <li>Renamed <code>fetch_parameterized()</code> as <code><a href="../reference/fetch_iquizoo.html">fetch_iquizoo()</a></code>. The latter is shorter and echoes with the package name.</li>
 <li>Removed <code>fetch_batch()</code> as vector parameters are supported by <code><a href="https://dbi.r-dbi.org/reference/dbGetQuery.html" class="external-link">DBI::dbGetQuery()</a></code>. <code><a href="../reference/fetch_iquizoo.html">fetch_iquizoo()</a></code> handles both vector and scalar parameters.</li>
 </ul></div>
@@ -342,14 +346,14 @@
 <h3 id="new-features-3-2-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-3-2-0"></a></h3>
 <ul><li>Added <code>setup_source()</code> to specify the data source. Arguments <code>driver</code>, <code>dsn</code> and <code>groups</code> of <code>fetch_parameterized()</code> now live in this function.</li>
 <li>Let <code>params</code> argument of <code>fetch_parameterized()</code> be optional (but not after <code>...</code>) when no parameters in <code>query</code>. Note this is not checked beforehand, so you should take care of whether there are parameters.</li>
-<li>Supported custom SQL templates. When users want to use different parameter names other than the default one, they could support their own paired with SQL templates. See <code><a href="../reference/setup_templates.html">setup_templates()</a></code> for details (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/66" class="external-link">#66</a>).</li>
+<li>Supported custom SQL templates. When users want to use different parameter names other than the default one, they could support their own paired with SQL templates. See <code><a href="../reference/setup_templates.html">setup_templates()</a></code> for details (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/66" class="external-link">#66</a>).</li>
 </ul></div>
 <div class="section level3">
 <h3 id="improvements-3-2-0">Improvements<a class="anchor" aria-label="anchor" href="#improvements-3-2-0"></a></h3>
 <ul><li>Enhanced progress hash.
 <ul><li>The name is changed from <code>project_hash</code> to <code>progress_hash</code>, which is more informative. So the argument <code>always_check_hash</code> of <code>prepare_fetch_data()</code> is changed to <code>check_progress</code> accordingly.</li>
 <li>Now if there are multiple projects, the hash will be separated for each project.</li>
-<li>The SQL now is independent of the user’s parameters (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/67" class="external-link">#67</a>).</li>
+<li>The SQL now is independent of the user’s parameters (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/67" class="external-link">#67</a>).</li>
 </ul></li>
 </ul></div>
 </div>
@@ -396,7 +400,7 @@
 <h3 id="breaking-changes-3-0-0">Breaking Changes<a class="anchor" aria-label="anchor" href="#breaking-changes-3-0-0"></a></h3>
 <ul><li>Supported the new database design of IQUIZOO. Now the Rmarkdown templates were removed, and users should call <code>tarflow.iquizoo::use_targets()</code> to generate the pipeline.</li>
 <li>Limited the parameters settings to only <code>course_name</code> and <code>course_period</code> for now. Other parameters will be added in future.</li>
-<li>Added <code>game_stage</code> and <code>game_star</code> to scores data (<a href="https://github.com/psychelzh/tarflow.iquizoo/issues/29" class="external-link">#29</a>).</li>
+<li>Added <code>game_stage</code> and <code>game_star</code> to scores data (<a href="https://github.com/iquizoo/tarflow.iquizoo/issues/29" class="external-link">#29</a>).</li>
 </ul></div>
 </div>
     <div class="section level2">
