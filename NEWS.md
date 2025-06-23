@@ -1,4 +1,6 @@
-# tarflow.iquizoo (development version)
+# tarflow.iquizoo 3.12.8
+
+* Fix urls, no user-level updates.
 
 # tarflow.iquizoo 3.12.7
 
@@ -50,7 +52,7 @@
 
 * Added `cache` argument to `tar_prep_iquizoo()` to optionally specify how to cache the fetched configuration data.
 * Support to customize the columns to be kept in the output of `users`. See [get_users_props_names()] for all available columns, and customize it by setting `subset_users_props` argument in `tar_prep_iquizoo()`.
-* Update contents sql template to support setting course name and game name ([#90](https://github.com/psychelzh/tarflow.iquizoo/issues/90)).
+* Update contents sql template to support setting course name and game name ([#90](https://github.com/iquizoo/tarflow.iquizoo/issues/90)).
 
 ## Bug Fixes
 
@@ -89,7 +91,7 @@
 
 ## Breaking Changes
 
-* Added `parse_data()`, previously named as `wrangle_data()`. See <https://github.com/psychelzh/preproc.iquizoo/issues/86>.
+* Added `parse_data()`, previously named as `wrangle_data()`. See <https://github.com/iquizoo/preproc.iquizoo/issues/86>.
 
 # tarflow.iquizoo 3.10.2
 
@@ -222,7 +224,7 @@
 
 ## Breaking Changes
 
-* Let pipeline perform raw data parsing and indices calculation on combined raw data from single tasks ([#73](https://github.com/psychelzh/tarflow.iquizoo/issues/73)).
+* Let pipeline perform raw data parsing and indices calculation on combined raw data from single tasks ([#73](https://github.com/iquizoo/tarflow.iquizoo/issues/73)).
 * Let `prepare_fetch_data()` signal error when `contents` contains no data.
 * Rename the target `contents` as `contents_origin` to avoid possible name conflict with `contents` input argument. This is a limitation of {targets} package.
 
@@ -249,7 +251,7 @@
 
 ## New Features
 
-* Added two functions `setup_option_file()` and `check_source()` to help setup the database connection option file and check if the database is ready ([#71](https://github.com/psychelzh/tarflow.iquizoo/issues/71)).
+* Added two functions `setup_option_file()` and `check_source()` to help setup the database connection option file and check if the database is ready ([#71](https://github.com/iquizoo/tarflow.iquizoo/issues/71)).
   * To ensure option file is correctly set up, you should specify these three environment variables: `MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`. See [option file template](inst/database/my.cnf.tmpl) for details.
   * Note if `check_source()` returns `FALSE`, this package will call `setup_option_file()` once to setup the option file in loading phase. You should check if the option file is correctly set up.
 
@@ -261,7 +263,7 @@
 
 ## Breaking Changes
 
-* The `RMariaDB::MariaDB()` database driver is detected with higher priority, and `odbc::odbc()` is technically deprecated, although still supported (not sure for working) for now ([#68](https://github.com/psychelzh/tarflow.iquizoo/issues/68)).
+* The `RMariaDB::MariaDB()` database driver is detected with higher priority, and `odbc::odbc()` is technically deprecated, although still supported (not sure for working) for now ([#68](https://github.com/iquizoo/tarflow.iquizoo/issues/68)).
 * Renamed `fetch_parameterized()` as `fetch_iquizoo()`. The latter is shorter and echoes with the package name.
 * Removed `fetch_batch()` as vector parameters are supported by `DBI::dbGetQuery()`. `fetch_iquizoo()` handles both vector and scalar parameters.
 
@@ -276,14 +278,14 @@
 
 * Added `setup_source()` to specify the data source. Arguments `driver`, `dsn` and `groups` of `fetch_parameterized()` now live in this function.
 * Let `params` argument of `fetch_parameterized()` be optional (but not after `...`) when no parameters in `query`. Note this is not checked beforehand, so you should take care of whether there are parameters.
-* Supported custom SQL templates. When users want to use different parameter names other than the default one, they could support their own paired with SQL templates. See `setup_templates()` for details ([#66](https://github.com/psychelzh/tarflow.iquizoo/issues/66)).
+* Supported custom SQL templates. When users want to use different parameter names other than the default one, they could support their own paired with SQL templates. See `setup_templates()` for details ([#66](https://github.com/iquizoo/tarflow.iquizoo/issues/66)).
 
 ## Improvements
 
 * Enhanced progress hash.
   * The name is changed from `project_hash` to `progress_hash`, which is more informative. So the argument `always_check_hash` of `prepare_fetch_data()` is changed to `check_progress` accordingly.
   * Now if there are multiple projects, the hash will be separated for each project.
-  * The SQL now is independent of the user's parameters ([#67](https://github.com/psychelzh/tarflow.iquizoo/issues/67)).
+  * The SQL now is independent of the user's parameters ([#67](https://github.com/iquizoo/tarflow.iquizoo/issues/67)).
 
 # tarflow.iquizoo 3.1.2
 
@@ -327,7 +329,7 @@
 
 * Supported the new database design of IQUIZOO. Now the Rmarkdown templates were removed, and users should call `tarflow.iquizoo::use_targets()` to generate the pipeline.
 * Limited the parameters settings to only `course_name` and `course_period` for now. Other parameters will be added in future.
-* Added `game_stage` and `game_star` to scores data ([#29](https://github.com/psychelzh/tarflow.iquizoo/issues/29)).
+* Added `game_stage` and `game_star` to scores data ([#29](https://github.com/iquizoo/tarflow.iquizoo/issues/29)).
 
 # tarflow.iquizoo 2.5.5
 
