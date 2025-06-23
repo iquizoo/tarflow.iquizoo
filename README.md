@@ -8,7 +8,7 @@
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![tarflow.iquizoo status
-badge](https://psychelzh.r-universe.dev/badges/tarflow.iquizoo)](https://psychelzh.r-universe.dev/tarflow.iquizoo)
+badge](https://iquizoo.r-universe.dev/badges/tarflow.iquizoo)](https://iquizoo.r-universe.dev/tarflow.iquizoo)
 [![R-CMD-check](https://github.com/iquizoo/tarflow.iquizoo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/iquizoo/tarflow.iquizoo/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/iquizoo/tarflow.iquizoo/graph/badge.svg)](https://app.codecov.io/gh/iquizoo/tarflow.iquizoo)
@@ -23,7 +23,7 @@ package.
 The preprocessing of IQUIZOO data used to be very laborious because the
 datasets were very disorganized. Newer version of database and games
 make things much better. Now there is a package called
-[preproc.iquizoo](https://github.com/psychelzh/preproc.iquizoo),
+[preproc.iquizoo](https://github.com/iquizoo/preproc.iquizoo),
 containing all the required functions used in preprocessing. It
 facilitates analysis significantly. For now, with the advent of
 [targets](https://docs.ropensci.org/targets/), we can easily setup
@@ -38,14 +38,14 @@ You can install the development version from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("psychelzh/tarflow.iquizoo@develop")
+devtools::install_github("iquizoo/tarflow.iquizoo@develop")
 ```
 
-Or you can install the stable version from [psychelzh’s
-R-universe](https://psychelzh.r-universe.dev/) with:
+Or you can install the stable version from [iquizoo’s
+R-universe](https://iquizoo.r-universe.dev/) with:
 
 ``` r
-install.packages("tarflow.iquizoo", repos = c(getOption("repos"), "https://psychelzh.r-universe.dev"))
+install.packages("tarflow.iquizoo", repos = c(getOption("repos"), "https://iquizoo.r-universe.dev"))
 ```
 
 ## Usage
@@ -61,5 +61,5 @@ pipeline will be executed in parallel by default.
 
 Please note that the tarflow.iquizoo project is released with a
 [Contributor Code of
-Conduct](https://psychelzh.github.io/tarflow.iquizoo/CODE_OF_CONDUCT.html).
+Conduct](https://iquizoo.github.io/tarflow.iquizoo/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms
